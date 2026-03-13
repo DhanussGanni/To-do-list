@@ -1,0 +1,29 @@
+{
+  "TaskUploads": [
+    {
+      "TaskName": "To do List",
+      "TaskDetails": "Currently the working of the page taking the data",
+      "Taskstatus": "Completed",
+      "id": "1"
+    },
+    {
+      "id": "77e1",
+      "TaskName": "Task 1",
+      "TaskDetails": "Data uploading into jason",
+      "Taskstatus": "Completed"
+    },
+    {
+      "id": "097b",
+      "TaskName": "Connecting to SQL",
+      "TaskDetails": "This Process will take time. I Have to learn a backend for that. will do it soon. Will take time",
+      "Taskstatus": "Yet to start"
+    },
+    {
+      "id": "46db",
+      "TaskName": "EdiT Task",
+      "TaskDetails": "Editing the task",
+      "Taskstatus": "In Progress"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

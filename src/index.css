@@ -1,13 +1,299 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  background-color:#e8e8e8;
+  font-family: Georgia, serif;
+}
+.header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 40px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.title{
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.nav-links{
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a{
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover{
+  color:#de3d11;
+}
+/* Add Task Container */
+.create {
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Heading */
+.create h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Labels */
+.create label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Inputs */
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Textarea */
+.create textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Button */
+.create button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Hover */
+.create button:hover {
+  background-color: #218838;
+}
+/* Main board container */
+.homepage{
+  width: 85%;
+  margin: 40px auto;
+  padding: 40px;
+  border: 2px solid #444;
+  border-radius: 30px;
+  background-color: #f4f4f4;
+
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 35px;
+}
+
+/* Column cards */
+.yts,
+.inprogress,
+.Completed{
+  background: #c7d7e0;
+  border-radius: 20px;
+  padding: 20px;
+  min-height: 350px;
+}
+
+/* Section headers */
+.Y h3,
+.I h3,
+.C h3{
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Task items */
+.yts p,
+.inprogress p,
+.Completed p{
+  padding: 8px;
+  margin: 10px 0;
+  color: purple;
+  font-size: 16px;
+}
+
+/* Hover effect */
+.yts p:hover,
+.inprogress p:hover,
+.Completed p:hover{
+  background: rgba(255,255,255,0.5);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Edit Task Container */
+.Update {
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Heading */
+.Update h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Labels */
+.Update label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Inputs and textarea */
+.Update input,
+.Update textarea,
+.Update select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Textarea height */
+.Update textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Button */
+.Update button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0077ff;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Hover */
+.Update button:hover {
+  background-color: #005fd1;
+}
+
+/* Disabled button */
+.Update button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+.status{
+  margin-bottom: 12px;
+}
+
+.status a{
+  text-decoration: none;
+}
+
+.status p{
+  padding: 10px;
+  border-radius: 8px;
+  color: rgb(17, 14, 17);
+  background: rgba(255,255,255,0.4);
+  transition: 0.5s;
+}
+
+.status p:hover{
+  background: white;
+  transform: translateX(10px);
+}
+/* Main container */
+.TaskDetails{
+  width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* Task name */
+.TaskDetails h2{
+  margin-bottom: 15px;
+  font-size: 26px;
+  color: #333;
+}
+
+/* Status text */
+.TaskDetails p{
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Task description */
+.TaskDetails article div{
+  margin-top: 10px;
+  padding: 15px;
+  background: #e3edf3;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Buttons container */
+.TaskDetails button{
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+/* Delete button */
+.TaskDetails button:first-of-type{
+  background-color: #e63946;
+  color: white;
+}
+
+.TaskDetails button:first-of-type:hover{
+  background-color: #c62828;
+}
+
+/* Edit button */
+.TaskDetails button:last-of-type{
+  background-color: #0077ff;
+  color: white;
+}
+
+.TaskDetails button:last-of-type:hover{
+  background-color: #005edb;
 }
