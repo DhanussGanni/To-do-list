@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
-import usefetch from "./fetchdata"
+import usefetch from "./fetchdata.js"
 import "./index.css"
 
 
@@ -9,7 +9,7 @@ const Edittask = ()=>{
     const [TaskDetails,SetTaskDetails] = useState("")
     const [Taskstatus,SetTaskstatus] = useState("")
     const [TaskName,SetTaskName] = useState("")
-    const { Data, Ispending, Iserror } = usefetch('https://moises-subelemental-nonshrinkingly.ngrok-free.dev/TaskUploads/' + id)
+    const { Data, Ispending, Iserror } = usefetch('http://localhost:8000/TaskUploads/' + id)
     const navigate = useNavigate();
 
     useEffect(()=>{

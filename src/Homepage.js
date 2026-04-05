@@ -5,7 +5,7 @@ import InProgress from "./Inprogress.js"
 import Completedones from "./Completed.js";
 
 const Homepage = () => {
-  const { Data, Ispending, Iserror } = usefetch("https://moises-subelemental-nonshrinkingly.ngrok-free.dev/TaskUploads");
+  const { Data, Ispending, Iserror } = usefetch("http://localhost:8000/TaskUploads");
 
   return (
     <>

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import useFetch from "./fetchdata";
+import useFetch from "./fetchdata.js";
 import { useNavigate } from "react-router-dom"
 import "./index.css"
 
@@ -7,11 +7,11 @@ const Details =()=>{
   const { status,id } = useParams();
   console.log(status, id)
   const navigate = useNavigate();
-  const { Data, Ispending, Iserror } = useFetch('https://moises-subelemental-nonshrinkingly.ngrok-free.dev/TaskUploads/' + id)
+  const { Data, Ispending, Iserror } = useFetch('http://localhost:8000/TaskUploads/' + id)
   
 const handledelete = () => {
   fetch(
-    "https://moises-subelemental-nonshrinkingly.ngrok-free.dev/TaskUploads/" + Data.id,
+    "http://localhost:8000/TaskUploads" + Data.id,
     {
       method: "DELETE",
       headers: {

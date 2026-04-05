@@ -9,7 +9,7 @@ const Addon = () => {
     const handlesubmit =(e) =>{
         e.preventDefault()
         const TaskUploads = {TaskName,TaskDetails,Taskstatus}
-        fetch("https://moises-subelemental-nonshrinkingly.ngrok-free.dev/TaskUploads",{
+        fetch("http://localhost:8000/TaskUploads",{
             method : "POST",
             headers :{"Content-Type": "application/json",
                 "ngrok-skip-browser-warning":"true"
